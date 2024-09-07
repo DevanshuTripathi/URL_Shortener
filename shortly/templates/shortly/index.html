@@ -21,7 +21,7 @@
             <div class="shortener">
                 <form method="post" class="form-container" action="{% url 'index' %}">
                     {% csrf_token %}
-                    <input type="text" class="form-control" name="original" required>
+                    <input type="text" class="form-control" name="original" target="_blank" required>
                     <input type="submit" class="btn btn-primary" value="Generate!">
                 </form>
             </div>
@@ -31,7 +31,7 @@
             </div>
             {% endif %}
             <div class="logout">
-                <a href="{% url 'logout' %}" class="btn btn-primary" target="_blank">Logout</a>
+                <a href="{% url 'logout' %}" class="btn btn-primary" >Logout</a>
             </div>
         </div>
     </div>
