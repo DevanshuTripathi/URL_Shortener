@@ -8,7 +8,7 @@
 
     <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
-        <h2>Register</h2>
+        <h2 style="color:white;">Register</h2>
         <div class="form-group">
             <input class="form-control" autofocus type="text" name="username" placeholder="Username">
         </div>
@@ -22,7 +22,7 @@
             <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password">
         </div>
         <input class="btn btn-primary" type="submit" value="Register">
-        Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+        <p style="color:white;">Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
     </form>
 
 {% endblock %}
