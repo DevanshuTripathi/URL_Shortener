@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,7 +87,7 @@ DATABASES = {
         'USER': os.getenv('DB_USER'),  # Database user
         'PASSWORD': os.getenv('DB_PASSWORD'),  # User password
         'HOST': os.getenv('DB_HOST'),  # Database host
-        'PORT': os.getenv('DB_PORT'),  # Database port (default: 5432)
+        'PORT': os.getenv('DB_PORT', '5432'),  # Database port (default: 5432)
     }
 }
 
