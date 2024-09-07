@@ -1,0 +1,39 @@
+{% extends 'shortly/layout.html' %}
+
+{% block body %}
+    {% if not user.is_authenticated %}
+    <div class="containerWelcome">
+        <div class="welcome-box">
+            <h1>Welcome to Shortly</h1>
+            <h3>A url shortener</h3>
+            <p>Please login or register to continue</p>
+            <div class="button-container">
+                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="container">
+        <div class="main-box">
+            <h1>Shortly</h1>
+            <h3>A url shortener</h3>
+            <div class="shortener">
+                <form method="post" class="form-container" action="{% url 'index' %}">
+                    {% csrf_token %}
+                    <input type="text" class="form-control" name="original" required>
+                    <input type="submit" class="btn btn-primary" value="Generate!">
+                </form>
+            </div>
+            {% if short %}
+            <div class="result">
+                <a href="{{ short }}">{{ short }}</a>
+            </div>
+            {% endif %}
+            <div class="logout">
+                <a href="{% url 'logout' %}" class="btn btn-primary" target="_blank">Logout</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

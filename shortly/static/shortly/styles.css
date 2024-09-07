@@ -1,0 +1,66 @@
+body {
+    background-image: url("bgimage.jpg");
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.containerWelcome, .container {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-box h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 5px;
+}
+
+.main-box h3 {
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+.main-box p {
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-bottom: 30px;
+}
+
+.main-box .form-control {
+    margin-bottom: 20px;
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.shortener {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.result {
+    margin:20px;
+}
+
+.form-container {
+    margin-bottom:10px;
+}
