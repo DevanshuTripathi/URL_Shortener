@@ -21,13 +21,13 @@
             <div class="shortener">
                 <form method="post" class="form-container" action="{% url 'index' %}">
                     {% csrf_token %}
-                    <input type="text" class="form-control" name="original" target="_blank" required>
+                    <input type="text" class="form-control" name="original"  required>
                     <input type="submit" class="btn btn-primary" value="Generate!">
                 </form>
             </div>
             {% if short %}
             <div class="result">
-                <a href="{{ short }}">{{ short }}</a>
+                <a href="{{ short }}" target="_blank">{{ short }}</a>
             </div>
             {% endif %}
             <div class="logout">
