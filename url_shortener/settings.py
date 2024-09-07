@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'url_shortener.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),  # Database name
+        'USER': os.getenv('DB_USER'),  # Database user
+        'PASSWORD': os.getenv('DB_PASSWORD'),  # User password
+        'HOST': os.getenv('DB_HOST'),  # Database host
+        'PORT': os.getenv('DB_PORT'),  # Database port (default: 5432)
     }
 }
 
