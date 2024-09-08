@@ -19,9 +19,9 @@
         </div>
         <input class="btn btn-primary" type="submit" value="Register">
         <p style="color:white;">Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
-        <p style="color:white;">
+        <p>
             {% if message %}
-                <div>{{ message }}</div>
+                <div style="color:white;">{{ message }}</div>
             {% endif %}
         </p>
     </form>
