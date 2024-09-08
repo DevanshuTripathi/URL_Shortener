@@ -2,10 +2,6 @@
 
 {% block body %}
 
-    {% if message %}
-        <div>{{ message }}</div>
-    {% endif %}
-
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <h2 style="color:white;">Login</h2>
@@ -17,6 +13,11 @@
         </div>
         <input class="btn btn-primary" type="submit" value="Login">
         <p style="color:white;">Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
+        <p style="color:white;">
+            {% if message %}
+                <div>{{ message }}</div>
+            {% endif %}
+        </p>
     </form>
 
 {% endblock %}
